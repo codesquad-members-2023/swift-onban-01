@@ -7,4 +7,5 @@ target 'Onban' do
 
   # Pods for Onban
   pod 'SwiftLint'
+  pod 'Toaster'
 end

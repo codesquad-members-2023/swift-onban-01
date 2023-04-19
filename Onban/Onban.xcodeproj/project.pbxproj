@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9021FA16E471CDA209BB9A76 /* Pods_Onban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C2DD414A6B5C440F7C5ABC /* Pods_Onban.framework */; };
 		FF01AB9529EFFBE00010D93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF01AB9429EFFBE00010D93C /* AppDelegate.swift */; };
 		FF01AB9729EFFBE00010D93C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF01AB9629EFFBE00010D93C /* SceneDelegate.swift */; };
 		FF01AB9929EFFBE00010D93C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF01AB9829EFFBE00010D93C /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		84B0F94DFB3C6D23C33D91B8 /* Pods-Onban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onban.release.xcconfig"; path = "Target Support Files/Pods-Onban/Pods-Onban.release.xcconfig"; sourceTree = "<group>"; };
 		91B5068929D6DBCEC5B3F116 /* Pods-Onban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onban.debug.xcconfig"; path = "Target Support Files/Pods-Onban/Pods-Onban.debug.xcconfig"; sourceTree = "<group>"; };
+		B1C2DD414A6B5C440F7C5ABC /* Pods_Onban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF01AB9129EFFBE00010D93C /* Onban.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onban.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF01AB9429EFFBE00010D93C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF01AB9629EFFBE00010D93C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9021FA16E471CDA209BB9A76 /* Pods_Onban.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +56,7 @@
 		F5EC9165B23D700139CFA7C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1C2DD414A6B5C440F7C5ABC /* Pods_Onban.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,6 +106,7 @@
 				FF01AB8D29EFFBE00010D93C /* Sources */,
 				FF01AB8E29EFFBE00010D93C /* Frameworks */,
 				FF01AB8F29EFFBE00010D93C /* Resources */,
+				624344F8D695E664595E41E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +165,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		624344F8D695E664595E41E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onban/Pods-Onban-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onban/Pods-Onban-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onban/Pods-Onban-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		66EC8DCDE50CEB2BF4B9E989 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
