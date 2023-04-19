@@ -1,0 +1,13 @@
+included:
+  - Onban
+
+force_unwrapping:
+  severity: error
+
+function_body_length:
+  - 25 # warning
+  - 26 # error
+
+opt_in_rules:
+  - force_unwrapping
+  - function_body_length
