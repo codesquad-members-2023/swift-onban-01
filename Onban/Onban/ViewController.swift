@@ -14,3 +14,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 }
+
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        return cell
+    }
+    
+    
+}
