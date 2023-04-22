@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import Toaster
 
 class ViewController: UIViewController {
 
+    private var sectionNumber = 0
     private var headerMessage = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         makeHeaderMessage()
     }
     
@@ -45,8 +46,15 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! HeaderCollectionReusableView
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
+        header.isUserInteractionEnabled = true
+        header.addGestureRecognizer(tapGesture)
         header.headerLabel.text = headerMessage[indexPath.section]
+        sectionNumber = indexPath.section
         return header
     }
+    
+    @objc func labelTapped() {
+        Toast(text: "\(headerMessage[sectionNumber])").show()
+    }
 }
-
