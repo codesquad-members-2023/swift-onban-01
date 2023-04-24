@@ -70,27 +70,29 @@
 
 ### 1. 상품목록 화면 구성
     a. CollectionView 추가
-        - [ ] Safe 영역 설정
-        - [ ] 오토레이아웃 설정
+        - [x] Safe 영역 설정
+        - [x] 오토레이아웃 설정
     b. Cell
-        - [ ] custom style 지정
-        - [ ] 오토레이아웃
-        - [ ] landscpae 가로/세로 모두 대응
-        - [ ] 설명 레이블 wrap
+        - [x] custom style 지정
+        - [x] 오토레이아웃
+        - [x] landscpae 가로/세로 모두 대응
+        - [x] 설명 레이블 wrap
     c. 반찬 섹션 구분
-        - [ ] main
-        - [ ] soup
-        - [ ] side
+        - [x] main
+        - [x] soup
+        - [x] side
     d. Cell Header Custom View
-        - [ ] 오토레이아웃 적용
+        - [x] 오토레이아웃 적용
     e. 해당 화면이 모든 아이폰 사이즈에 대응하도록 오토레이아웃 적용
     
 ### 2. 의존성 관리도구
-    - [ ] Cocoapod 설치
-    - [ ] Swift Lint 설치
-    - [ ] Cocoapod으로 Toaster 패키지 설치
-    - [ ] import Toaster
-    - [ ] 섹션 제목, 상품 개수 toast 형태 표시
+    - [x] Cocoapod 설치
+    - [x] Swift Lint 설치
+    - [x] Cocoapod으로 Toaster 패키지 설치
+    - [x] import Toaster
+    - Toast 메시지
+        - [x] 헤더 제목
+        - [ ] 상품 갯수
 
 ### 3. 네트워크 프로그래밍
     a. URLSession GET 메소드 사용하여 JSON 모델 객체 구현
