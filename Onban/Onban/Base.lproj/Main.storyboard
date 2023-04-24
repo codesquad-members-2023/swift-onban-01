@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="16" minY="24" maxX="16" maxY="24"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="pZ0-pp-70e">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="pZ0-pp-70e" customClass="FoodCollectionViewCell" customModule="Onban" customModuleProvider="target">
                                         <rect key="frame" x="25" y="74" width="343" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vLX-MJ-lQ6">
@@ -90,6 +90,14 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="343" height="130"/>
+                                        <connections>
+                                            <outlet property="badge" destination="NQY-xZ-Cau" id="hoP-BB-DOB"/>
+                                            <outlet property="desc" destination="Pdo-ZB-lZz" id="mEe-zV-Ujs"/>
+                                            <outlet property="foodThumbnail" destination="xYF-xf-Zw4" id="dmB-pj-uez"/>
+                                            <outlet property="normalPrice" destination="BDn-ZC-6yl" id="yG3-iK-eYb"/>
+                                            <outlet property="priceStack" destination="vo4-a2-yUN" id="PDr-Lz-Bag"/>
+                                            <outlet property="title" destination="WUt-PO-Y8T" id="xaN-CJ-Khl"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="pks-4d-nRh" customClass="HeaderCollectionReusableView" customModule="Onban" customModuleProvider="target">
@@ -130,6 +138,9 @@
                             <constraint firstItem="qBT-Da-WQR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xly-bY-rBI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="qBT-Da-WQR" id="RFE-ps-ojv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
