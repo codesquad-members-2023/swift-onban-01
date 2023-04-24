@@ -15,6 +15,9 @@
 		FF01AB9E29EFFBE10010D93C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF01AB9D29EFFBE10010D93C /* Assets.xcassets */; };
 		FF01ABA129EFFBE10010D93C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF01AB9F29EFFBE10010D93C /* LaunchScreen.storyboard */; };
 		FF01ABAD29F001C70010D93C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FF01ABAC29F001C70010D93C /* .swiftlint.yml */; };
+		FF34572329F69D87007B9B77 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34572129F69D87007B9B77 /* Food.swift */; };
+		FF34572429F69D87007B9B77 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34572229F69D87007B9B77 /* HeaderCollectionReusableView.swift */; };
+		FF34572629F69DA7007B9B77 /* OnbanUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34572529F69DA7007B9B77 /* OnbanUrl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		FF01ABA029EFFBE10010D93C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF01ABA229EFFBE10010D93C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF01ABAC29F001C70010D93C /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		FF34572129F69D87007B9B77 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		FF34572229F69D87007B9B77 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		FF34572529F69DA7007B9B77 /* OnbanUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnbanUrl.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +92,12 @@
 				FF01AB9429EFFBE00010D93C /* AppDelegate.swift */,
 				FF01AB9629EFFBE00010D93C /* SceneDelegate.swift */,
 				FF01AB9829EFFBE00010D93C /* ViewController.swift */,
+				FF34572129F69D87007B9B77 /* Food.swift */,
+				FF34572229F69D87007B9B77 /* HeaderCollectionReusableView.swift */,
 				FF01AB9A29EFFBE00010D93C /* Main.storyboard */,
 				FF01AB9D29EFFBE10010D93C /* Assets.xcassets */,
 				FF01AB9F29EFFBE10010D93C /* LaunchScreen.storyboard */,
+				FF34572529F69DA7007B9B77 /* OnbanUrl.swift */,
 				FF01ABA229EFFBE10010D93C /* Info.plist */,
 			);
 			path = Onban;
@@ -230,7 +239,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF01AB9929EFFBE00010D93C /* ViewController.swift in Sources */,
+				FF34572329F69D87007B9B77 /* Food.swift in Sources */,
+				FF34572629F69DA7007B9B77 /* OnbanUrl.swift in Sources */,
 				FF01AB9529EFFBE00010D93C /* AppDelegate.swift in Sources */,
+				FF34572429F69D87007B9B77 /* HeaderCollectionReusableView.swift in Sources */,
 				FF01AB9729EFFBE00010D93C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
