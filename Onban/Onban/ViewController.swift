@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     private var sectionNumber = 0
     private var headerMessage = [String]()
+    private var sections = [Food]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +90,8 @@ extension ViewController {
                 os_log("Response: \(error)")
                 return
             }
+            
+            self.sections.append(contentsOf: foodResponse.body)
         }
         dataTask.resume()
     }
