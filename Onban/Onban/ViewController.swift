@@ -16,9 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         makeHeaderMessage()
+        fetchFood(of: "main")
     }
     
-    func makeHeaderMessage() {
+    func makeHeaderMessage() { // 데이터 객체 따로 타입 분리
         let main = "온 가족이 좋아하는 든든한 메인 요리"
         let soup = "정성과 건강이 가득 담긴 국물 요리"
         let side = "식탁을 풍성하게 하는 정갈한 밑반찬"
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return headerMessage.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -43,9 +44,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         return cell
     }
     
+    // 탭 제스처 따로 분리
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! HeaderCollectionReusableView
-        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
         header.isUserInteractionEnabled = true
         header.addGestureRecognizer(tapGesture)
@@ -56,5 +57,26 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     @objc func labelTapped() {
         Toast(text: "\(headerMessage[sectionNumber])").show()
+    }
+}
+
+extension ViewController {
+    func fetchFood(of foodType: String) {
+        let urlList = [baseEndPoint, foodType]
+        guard let url = URL(string: urlList.joined(separator: "/")) else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
+//            guard error == nil,
+//                  let data = data,
+            guard let data = data else {return}
+            do {
+                let foodResponse = try JSONDecoder().decode(FoodResponse.self, from: data)
+                print(foodResponse)
+            } catch {
+                print(error)
+            }
+        }
+        dataTask.resume()
     }
 }
