@@ -7,6 +7,7 @@
 
 import UIKit
 import Toaster
+import OSLog
 
 class ViewController: UIViewController {
 
@@ -66,15 +67,27 @@ extension ViewController {
         guard let url = URL(string: urlList.joined(separator: "/")) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
-//            guard error == nil,
-//                  let data = data,
-            guard let data = data else {return}
-            do {
-                let foodResponse = try JSONDecoder().decode(FoodResponse.self, from: data)
-                print(foodResponse)
-            } catch {
-                print(error)
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request) { data, response, error in
+
+            if let error = error {
+                os_log("Error: \(error)")
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse else {
+                os_log("invalid response")
+                return
+            }
+            
+            guard let data = data else {
+                fatalError("invalid data")
+            }
+            
+            guard let foodResponse = try? JSONDecoder().decode(FoodResponse.self, from: data) else {
+                os_log("Response: \(error)")
+                return
             }
         }
         dataTask.resume()
