@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FF377BC29F7321B00C8CFF4 /* FoodCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF377BB29F7321B00C8CFF4 /* FoodCollectionViewCell.swift */; };
 		9021FA16E471CDA209BB9A76 /* Pods_Onban.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C2DD414A6B5C440F7C5ABC /* Pods_Onban.framework */; };
 		FF01AB9529EFFBE00010D93C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF01AB9429EFFBE00010D93C /* AppDelegate.swift */; };
 		FF01AB9729EFFBE00010D93C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF01AB9629EFFBE00010D93C /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FF377BB29F7321B00C8CFF4 /* FoodCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCollectionViewCell.swift; sourceTree = "<group>"; };
 		84B0F94DFB3C6D23C33D91B8 /* Pods-Onban.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onban.release.xcconfig"; path = "Target Support Files/Pods-Onban/Pods-Onban.release.xcconfig"; sourceTree = "<group>"; };
 		91B5068929D6DBCEC5B3F116 /* Pods-Onban.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onban.debug.xcconfig"; path = "Target Support Files/Pods-Onban/Pods-Onban.debug.xcconfig"; sourceTree = "<group>"; };
 		B1C2DD414A6B5C440F7C5ABC /* Pods_Onban.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onban.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				FF01AB9429EFFBE00010D93C /* AppDelegate.swift */,
 				FF01AB9629EFFBE00010D93C /* SceneDelegate.swift */,
 				FF01AB9829EFFBE00010D93C /* ViewController.swift */,
+				4FF377BB29F7321B00C8CFF4 /* FoodCollectionViewCell.swift */,
 				FF34572129F69D87007B9B77 /* Food.swift */,
 				FF34572229F69D87007B9B77 /* HeaderCollectionReusableView.swift */,
 				FF01AB9A29EFFBE00010D93C /* Main.storyboard */,
@@ -229,7 +232,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftLint/swiftlint\n";
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -244,6 +247,7 @@
 				FF01AB9529EFFBE00010D93C /* AppDelegate.swift in Sources */,
 				FF34572429F69D87007B9B77 /* HeaderCollectionReusableView.swift in Sources */,
 				FF01AB9729EFFBE00010D93C /* SceneDelegate.swift in Sources */,
+				4FF377BC29F7321B00C8CFF4 /* FoodCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
