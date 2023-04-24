@@ -13,8 +13,9 @@ class ViewController: UIViewController {
 
     private var sectionNumber = 0
     private var headerMessage = [String]()
-    private var sections = [Food]()
+    private var sections = [[Food]]()
     
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         makeHeaderMessage()
@@ -34,15 +35,20 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return headerMessage.count
+        return sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return sections[section].count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! FoodCollectionViewCell
+        let food = sections[indexPath.section][indexPath.row]
+        cell.title.text = food.title
+        cell.desc.text = food.description
+        cell.normalPrice.text = food.normalPrice
+        
         return cell
     }
     
@@ -91,7 +97,10 @@ extension ViewController {
                 return
             }
             
-            self.sections.append(contentsOf: foodResponse.body)
+            self.sections.append(foodResponse.body)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
         dataTask.resume()
     }
