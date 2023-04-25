@@ -97,10 +97,10 @@
 				4FF377BB29F7321B00C8CFF4 /* FoodCollectionViewCell.swift */,
 				FF34572129F69D87007B9B77 /* Food.swift */,
 				FF34572229F69D87007B9B77 /* HeaderCollectionReusableView.swift */,
+				FF34572529F69DA7007B9B77 /* OnbanUrl.swift */,
 				FF01AB9A29EFFBE00010D93C /* Main.storyboard */,
 				FF01AB9D29EFFBE10010D93C /* Assets.xcassets */,
 				FF01AB9F29EFFBE10010D93C /* LaunchScreen.storyboard */,
-				FF34572529F69DA7007B9B77 /* OnbanUrl.swift */,
 				FF01ABA229EFFBE10010D93C /* Info.plist */,
 			);
 			path = Onban;

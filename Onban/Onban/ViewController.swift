@@ -12,24 +12,13 @@ import OSLog
 class ViewController: UIViewController {
 
     private var sectionNumber = 0
-    private var headerMessage = [String]()
+    private var headerMessage = HeaderMessages.allCases
     private var sections = [[Food]]()
     
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeHeaderMessage()
         fetchFood(of: "main")
-    }
-    
-    func makeHeaderMessage() { // 데이터 객체 따로 타입 분리
-        let main = "온 가족이 좋아하는 든든한 메인 요리"
-        let soup = "정성과 건강이 가득 담긴 국물 요리"
-        let side = "식탁을 풍성하게 하는 정갈한 밑반찬"
-        
-        headerMessage.append(main)
-        headerMessage.append(soup)
-        headerMessage.append(side)
     }
 }
 
@@ -58,7 +47,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
         header.isUserInteractionEnabled = true
         header.addGestureRecognizer(tapGesture)
-        header.headerLabel.text = headerMessage[indexPath.section]
+        header.headerLabel.text = "\(headerMessage[indexPath.section])"
         sectionNumber = indexPath.section
         return header
     }
