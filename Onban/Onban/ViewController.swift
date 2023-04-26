@@ -12,7 +12,6 @@ import OSLog
 class ViewController: UIViewController {
 
     private var sectionNumber = 0
-    private var headerMessage = HeaderMessages.allCases
     private var sections = [[Food]]()
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -36,7 +35,36 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         let food = sections[indexPath.section][indexPath.row]
         cell.title.text = food.title
         cell.desc.text = food.description
-        cell.normalPrice.text = food.normalPrice
+        
+        if let normalPrice = food.normalPrice {
+            cell.normalPrice.text = normalPrice
+            
+            cell.salePrice.textColor = .gray
+            let attributedString = NSMutableAttributedString(string: food.salePrice)
+            attributedString.addAttribute(
+                .strikethroughStyle,
+                value: NSUnderlineStyle.single.rawValue,
+                range: NSRange(location: 0, length: attributedString.length)
+            )
+            cell.salePrice.attributedText = attributedString
+        } else {
+            cell.normalPrice.isHidden = true
+            cell.salePrice.text = food.salePrice
+        }
+        
+        print(cell.badge.subviews.count)
+        if let badge = food.badge, cell.badge.subviews.count == 0 {
+            badge.enumerated().forEach { index, data in
+                if data.contains("특가") {
+                    let badgeLabel = BadgeLabel(index: 2, name: data)
+                    cell.badge.addArrangedSubview(badgeLabel)
+                } else {
+                    let badgeLabel = BadgeLabel(index: index, name: data)
+                    cell.badge.addArrangedSubview(badgeLabel)
+                }
+                return
+            }
+        }
         
         return cell
     }
@@ -47,13 +75,13 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped))
         header.isUserInteractionEnabled = true
         header.addGestureRecognizer(tapGesture)
-        header.headerLabel.text = "\(headerMessage[indexPath.section])"
+        header.headerLabel.text = "\(foodHeaders[indexPath.section])"
         sectionNumber = indexPath.section
         return header
     }
     
     @objc func labelTapped() {
-        Toast(text: "\(headerMessage[sectionNumber])").show()
+        Toast(text: "\(foodHeaders[sectionNumber])").show()
     }
 }
 
@@ -94,3 +122,18 @@ extension ViewController {
         dataTask.resume()
     }
 }
+
+
+//extension ViewController {
+//    func makeRoundLabel(text: String, index: Int) -> UILabel {
+//        let firstLabel = UILabel()
+//        firstLabel.font = UIFont.systemFont(ofSize: 8, weight: .bold, width: .standard)
+//        firstLabel.textColor = .white
+//        firstLabel.text = text
+//        firstLabel.layer.cornerRadius = firstLabel.bounds.height / 2
+//        firstLabel.layer.masksToBounds = true
+//        firstLabel.backgroundColor = UIColor(named: "Primary200")
+//        
+//        return firstLabel
+//    }
+//}

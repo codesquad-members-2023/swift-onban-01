@@ -95,7 +95,7 @@
                                             <outlet property="desc" destination="Pdo-ZB-lZz" id="mEe-zV-Ujs"/>
                                             <outlet property="foodThumbnail" destination="xYF-xf-Zw4" id="dmB-pj-uez"/>
                                             <outlet property="normalPrice" destination="BDn-ZC-6yl" id="yG3-iK-eYb"/>
-                                            <outlet property="priceStack" destination="vo4-a2-yUN" id="PDr-Lz-Bag"/>
+                                            <outlet property="salePrice" destination="EJy-ni-wcw" id="8oO-Bb-0Pm"/>
                                             <outlet property="title" destination="WUt-PO-Y8T" id="xaN-CJ-Khl"/>
                                         </connections>
                                     </collectionViewCell>
