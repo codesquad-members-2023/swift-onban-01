@@ -13,7 +13,7 @@ class FoodCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var normalPrice: UILabel!
+    @IBOutlet weak var salePrice: UILabel!
     
-    @IBOutlet weak var priceStack: UIStackView!
     @IBOutlet weak var badge: UIStackView!
 }
