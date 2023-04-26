@@ -19,6 +19,7 @@
 		FF34572329F69D87007B9B77 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34572129F69D87007B9B77 /* Food.swift */; };
 		FF34572429F69D87007B9B77 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34572229F69D87007B9B77 /* HeaderCollectionReusableView.swift */; };
 		FF34572629F69DA7007B9B77 /* OnbanConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF34572529F69DA7007B9B77 /* OnbanConfigure.swift */; };
+		FF4087A129F95261003BED80 /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4087A029F95261003BED80 /* BadgeLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FF34572129F69D87007B9B77 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		FF34572229F69D87007B9B77 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		FF34572529F69DA7007B9B77 /* OnbanConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnbanConfigure.swift; sourceTree = SOURCE_ROOT; };
+		FF4087A029F95261003BED80 /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				FF01AB9429EFFBE00010D93C /* AppDelegate.swift */,
 				FF01AB9629EFFBE00010D93C /* SceneDelegate.swift */,
 				FF01AB9829EFFBE00010D93C /* ViewController.swift */,
+				FF4087A029F95261003BED80 /* BadgeLabel.swift */,
 				4FF377BB29F7321B00C8CFF4 /* FoodCollectionViewCell.swift */,
 				FF34572129F69D87007B9B77 /* Food.swift */,
 				FF34572229F69D87007B9B77 /* HeaderCollectionReusableView.swift */,
@@ -247,6 +250,7 @@
 				FF01AB9529EFFBE00010D93C /* AppDelegate.swift in Sources */,
 				FF34572429F69D87007B9B77 /* HeaderCollectionReusableView.swift in Sources */,
 				FF01AB9729EFFBE00010D93C /* SceneDelegate.swift in Sources */,
+				FF4087A129F95261003BED80 /* BadgeLabel.swift in Sources */,
 				4FF377BC29F7321B00C8CFF4 /* FoodCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
