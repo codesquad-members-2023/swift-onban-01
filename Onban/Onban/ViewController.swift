@@ -37,16 +37,16 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.desc.text = food.description
         
         if let normalPrice = food.normalPrice {
-            cell.normalPrice.text = normalPrice
+            cell.salePrice.text = food.salePrice
             
-            cell.salePrice.textColor = .gray
-            let attributedString = NSMutableAttributedString(string: food.salePrice)
+            cell.normalPrice.textColor = .gray
+            let attributedString = NSMutableAttributedString(string: normalPrice)
             attributedString.addAttribute(
                 .strikethroughStyle,
                 value: NSUnderlineStyle.single.rawValue,
                 range: NSRange(location: 0, length: attributedString.length)
             )
-            cell.salePrice.attributedText = attributedString
+            cell.normalPrice.attributedText = attributedString
         } else {
             cell.normalPrice.isHidden = true
             cell.salePrice.text = food.salePrice
